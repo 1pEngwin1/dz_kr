@@ -4,10 +4,20 @@ b = int(input())
 c = int(input())
 d = int(input())
 
-kol = 0
+dlina = 0
 
-for i in range(a,b+1):
-    for j in range(c,d+1):
-        if i == j:
-            kol += 1
-print(kol)
+if a < d:
+    x = b - a + 1
+    y = d - c + 1
+    if c > a and b < d:
+        dlina = max(x,y) - abs(a - c)
+    elif c > a and b > d:
+        dlina = max(x, y) - abs(a - c) - abs(b - d)
+    elif a > c and b < d:
+        dlina = max(x, y) - abs(a - c) - abs(b - d)
+    elif a > c and b > d:
+        dlina = max(x, y) - abs(a - c)
+elif a == d or c == b:
+    dlina = 1
+
+print(dlina)
