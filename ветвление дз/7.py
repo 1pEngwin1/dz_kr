@@ -4,14 +4,6 @@ b = int(input())
 c = int(input())
 d = int(input())
 
-if a < d:
-    
-
-
-
-
-
-
 kol = 0
 
 for i in range(a,b+1):
