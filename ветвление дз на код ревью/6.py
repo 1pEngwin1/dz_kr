@@ -4,10 +4,10 @@ y = int(input())
 z = int(input())
 
 if (x + y > z) and (x + z > y) and (y + z > x):
-    if x == y or z == y or x == z:
-        print('Равнобедренный треугольник')
-    elif x == y and y == z:
+    if x == y and z == y and x == z:
         print('Равносторонний треугольник')
+    elif x == y or y == z or x == z:
+        print('Равнобедренный треугольник')
     else:
         print('Разносторонний треугольник')
 else:
